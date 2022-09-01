@@ -1,10 +1,10 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const Journal = () => {
   const location = useParams();
-  console.log('🚀 ~ file: Journal.tsx ~ line 5 ~ Journal ~ location', location);
+  console.log("🚀 ~ file: Journal.tsx ~ line 5 ~ Journal ~ location", location);
 
-  return <h1>Journal {location.idParam}</h1>;
+  return <h1>Journal {location.idParam} wtf</h1>;
 };
 
 export default Journal;
