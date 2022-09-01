@@ -1,7 +1,6 @@
-import { Button, Table, Tabs } from 'antd';
-import { useEffect, useMemo, useState } from 'react';
+import { Button,  Tabs } from 'antd';
+import {  useState } from 'react';
 
-import { getReactColumns } from './utils';
 
 const { TabPane } = Tabs;
 
@@ -21,7 +20,6 @@ const Home = () => {
     setTabSelect(activeKey);
   };
 
-  const memoColumns = useMemo(() => getReactColumns(columns), [columns]);
 
   return (
     <div>
@@ -38,20 +36,10 @@ const Home = () => {
         size="large"
       >
         <TabPane tab="Созданные мной" key="1">
-          <Table
-            columns={memoColumns}
-            dataSource={rows}
-            loading={isLoading}
-            style={{ height: '100vh' }}
-          />
+        Созданные мной
         </TabPane>
         <TabPane tab="Все" key="2">
-          <Table
-            columns={memoColumns}
-            dataSource={rows}
-            loading={isLoading}
-            style={{ height: '100vh' }}
-          />
+        Все
         </TabPane>
       </Tabs>
     </div>
